@@ -12,7 +12,7 @@ What you should be able to do :
 User :
 -create an account & log in
 -display list of items received
--link other social media profiles
+-link other social network profiles
 -appart from username every piece of information can be private or public
 
 Xchange :
