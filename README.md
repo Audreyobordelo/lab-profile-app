@@ -27,6 +27,8 @@ Xchange :
 
 Community : a view of the community through different data 
 
+-link to the Telegram channel
+
 -link to the Are.na (notifications when updates)
 
 -link to youtube channel (notifications when updates)
