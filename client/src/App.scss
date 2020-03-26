@@ -1,0 +1,144 @@
+body {background-color:#d3e7d3;}
+
+.App {
+  min-height:100vh;
+  display:flex; align-items:center; justify-content:center;
+}
+
+input,
+button {font:inherit;}
+
+form {
+  .error {color:red;}
+
+  label em {
+    font-style:normal;
+    display:block;
+  }
+}
+
+h1 {color:#648166;}
+
+/*
+                    _       
+                   (_)      
+  _ __   ___  _ __  _ _ __  
+ | '_ \ / _ \| '_ \| | '_ \ 
+ | |_) | (_) | |_) | | | | |
+ | .__/ \___/| .__/|_|_| |_|
+ | |         | |            
+ |_|         |_|            
+*/
+
+.popin {
+  background:white; box-shadow:0 0 .5em rgba(0,0,0,.125);
+  display:flex; width:45em; min-height:30em;
+
+  border-radius:0.25em;overflow:hidden;
+
+  &__one,
+  &__two {width:50%;}
+
+  &__two {
+    background:#c0e3be url("/arc.svg") left center /5% 110% no-repeat;
+  }
+
+  // padding
+  &__one,
+  &__two {padding:3em;}
+}
+
+/*
+  _     _         
+ | |   | |        
+ | |__ | |_ _ __  
+ | '_ \| __| '_ \ 
+ | |_) | |_| | | |
+ |_.__/ \__|_| |_|
+*/
+
+.btn {
+  display:inline-block;
+  background:#c0e3be;
+  padding:.85em 4em;
+  border-radius:.25em;
+  font-weight:bold;
+  font-size:80%;
+  text-align:center;
+  cursor:pointer;
+}
+button.btn {
+  border:inherit;
+}
+a.btn {text-decoration:none; color:inherit;}
+
+.popin .btn {display:block; width:100%;}
+
+/*
+  _                          
+ | |                         
+ | |__   ___  _ __ ___   ___ 
+ | '_ \ / _ \| '_ ` _ \ / _ \
+ | | | | (_) | | | | | |  __/
+ |_| |_|\___/|_| |_| |_|\___|
+*/
+
+[data-route="/"],
+[data-route="/profile"] {
+  .popin__one {
+    display:flex; flex-direction:column;
+    .cta {margin-top:auto; margin-bottom:0;}
+  }
+
+  p em {font-style:normal; color:gray;}
+  p em +span {display:block; font-size:150%;}
+
+  .btn.logout {background-color:transparent;color:red;}
+
+  .btn +.btn {margin-top:1em;}
+
+  img.avatar {
+    display:block; width:13em;height:13em;border-radius:100%; object-fit:contain; margin:0 auto;
+    background:#e1e1e1;
+    margin-bottom:1em;
+    object-fit: cover;
+  }
+
+  .popin__two {
+    display:flex; flex-direction:column;
+    p:last-child {
+      margin-top:auto; margin-bottom:0;
+      color:gray;
+    }
+  }
+}
+
+/*
+  _             _           __  _                         
+ | |           (_)         / / (_)                        
+ | | ___   __ _ _ _ __    / /__ _  __ _ _ __  _   _ _ __  
+ | |/ _ \ / _` | | '_ \  / / __| |/ _` | '_ \| | | | '_ \ 
+ | | (_) | (_| | | | | |/ /\__ \ | (_| | | | | |_| | |_) |
+ |_|\___/ \__, |_|_| |_/_/ |___/_|\__, |_| |_|\__,_| .__/ 
+           __/ |                   __/ |           | |    
+          |___/                   |___/            |_|    
+*/
+
+[data-route="/login"],
+[data-route="/signup"] {
+  .btn {background-color:#ffffff;}
+
+  .popin__one h1 {margin-top:0;}
+
+  .popin__two {
+    display:flex; flex-direction:column;
+    p:last-child {margin-top:auto; margin-bottom:0;}
+
+    p:first-child {margin-top:0;}
+  }
+
+  .popin__two strong {display:block; font-size:150%;}
+
+  p small {color:gray;}
+  p small +.btn {margin-top:1em;}
+}
