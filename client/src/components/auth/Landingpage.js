@@ -12,7 +12,7 @@ export default (props) => {
       ) : (
         /* <Popin one={(*/
           <>
-           <img src ='/client/public/images/always forward.png'></img>
+           <img src ='/client/public/images/be still.png'></img>
 
 
             <h1>LOTX</h1>
