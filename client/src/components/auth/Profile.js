@@ -65,9 +65,7 @@ export default class extends React.Component {
                 </label>
               </form>
     
-              <p>
-                <small>The user is able to upload a new profile photo, using NodeJS and Multer uploader.</small>
-              </p>
+              
             </>
           )} />
         )}

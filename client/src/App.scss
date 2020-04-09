@@ -1,8 +1,14 @@
-body {background-color:#d3e7d3;}
+body {
+  background-color:#9F9C9C;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 
 .App {
   min-height:100vh;
-  display:flex; align-items:center; justify-content:center;
+  display:flex;
+  flex-direction: column; 
+  align-items:center; 
+  justify-content:center; 
 }
 
 input,
@@ -17,7 +23,18 @@ form {
   }
 }
 
-h1 {color:#648166;}
+h1 {
+  color:#5A5757;
+  display:flex;
+  align-items:center; 
+}
+
+a {color : #050505;}
+
+img {
+  width:  150px;
+  height: 150px;
+}
 
 /*
                     _       
@@ -32,7 +49,7 @@ h1 {color:#648166;}
 
 .popin {
   background:white; box-shadow:0 0 .5em rgba(0,0,0,.125);
-  display:flex; width:45em; min-height:30em;
+  display:flex; width:60em; min-height:40em;
 
   border-radius:0.25em;overflow:hidden;
 
@@ -40,7 +57,7 @@ h1 {color:#648166;}
   &__two {width:50%;}
 
   &__two {
-    background:#c0e3be url("/arc.svg") left center /5% 110% no-repeat;
+    background:#D6D2D2 url("/arc.svg") left center /5% 110% no-repeat;
   }
 
   // padding
@@ -59,7 +76,7 @@ h1 {color:#648166;}
 
 .btn {
   display:inline-block;
-  background:#c0e3be;
+  background:#D6D2D2;
   padding:.85em 4em;
   border-radius:.25em;
   font-weight:bold;
@@ -98,7 +115,7 @@ a.btn {text-decoration:none; color:inherit;}
   .btn +.btn {margin-top:1em;}
 
   img.avatar {
-    display:block; width:13em;height:13em;border-radius:100%; object-fit:contain; margin:0 auto;
+    display:block; width:10em;height:13em;border-radius:100%; object-fit:contain; margin:0 auto;
     background:#e1e1e1;
     margin-bottom:1em;
     object-fit: cover;

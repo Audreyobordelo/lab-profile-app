@@ -17,7 +17,7 @@ const userSchema = new Schema({
 
   image : { 
     type: String, 
-    default : '../public/images/chelovecheck.jpeg',
+    default : 'https://raw.githubusercontent.com/Audreyobordelo/LOTX/master/server/public/images/chelovecheck.jpeg',
   },
 
 }, {

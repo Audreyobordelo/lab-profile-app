@@ -48,6 +48,9 @@ require('./passport')(app);
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
 
+const lotUsers = require('./routes/Lot-users');
+app.use('/', lotUsers);
+
 //
 // After routes: static server || React SPA
 //

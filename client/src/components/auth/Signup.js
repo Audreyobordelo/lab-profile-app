@@ -23,7 +23,7 @@ export default class extends React.Component {
     authService.signup(username, password, city, country, subscription)
       .then(response => {
             this.props.updateUser(response);
-            this.props.history.push('/');
+            this.props.history.push('/homepage');
       })
       .catch(err => this.setState({error: err.response.data.message}))
     ;
