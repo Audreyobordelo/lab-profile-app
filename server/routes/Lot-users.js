@@ -5,9 +5,9 @@ const User = require("../models/User");
 
 router.get('/Lot-users', (req, res, next) => { 
 
-    User.find() 
+    User.find()
       .then(lotUsersFromDB => {
-        res.json(lotUsersFromDB); 
+        res.json(lotUsersFromDB);
       })
       .catch(error => next(error));
   });
@@ -15,6 +15,7 @@ router.get('/Lot-users', (req, res, next) => {
 router.get('/findOneUser/:id', (req, res, next) => {
   const id = req.params.id;
   User.findById(id)
+  .populate('items')
   .then(fellowLotUser => {
     res.json(fellowLotUser);
   })

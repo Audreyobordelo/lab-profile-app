@@ -51,6 +51,9 @@ app.use('/auth', authRoutes);
 const lotUsers = require('./routes/Lot-users');
 app.use('/', lotUsers);
 
+const lotProducts = require('./routes/Lot-products');
+app.use('/', lotProducts);
+
 //
 // After routes: static server || React SPA
 //
@@ -95,6 +98,11 @@ app.use((err, req, res, next) => {
   res.status(err.status);
 
   res.json(err);
+});
+
+app.use((req, res, next) => {
+  // If no routes match, send them the React HTML.
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 module.exports = app;

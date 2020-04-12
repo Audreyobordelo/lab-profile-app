@@ -17,7 +17,7 @@ export default class extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const { username, password, city, country, subscription } = this.state;
+    const { username, password, city, country, subscription, error } = this.state;
 
     // 1. Signup
     authService.signup(username, password, city, country, subscription)

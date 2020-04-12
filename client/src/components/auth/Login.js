@@ -16,7 +16,7 @@ export default class extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    authService.login(this.state.username, this.state.password)
+    authService.login(this.state.username, this.state.password, this.state.error)
       .then(response => {
         this.setState({error: ""});
 
@@ -61,6 +61,10 @@ export default class extends React.Component {
           </form>
 
           <p>
+
+          </p>
+
+          <p>
             <small>If you don't have an account yet, you can create your account <Link to="/signup">here</Link></small>
           </p>
         </>
@@ -68,8 +72,13 @@ export default class extends React.Component {
         <>
           <p>
             <strong>Hello!!</strong>
+            <p>
+
+            </p>
             <span role="img">🏴</span> Welcome back fellow LOT user <span role="img">🏴</span> 
           </p>
+
+          <img src = "https://raw.githubusercontent.com/Audreyobordelo/LOTX/master/client/public/images/we%20are%20running%20to%20a%20higher%20ground.png" alt = 'higher ground'></img>
           
           <p>
             <small>If you login, you agree with all our terms and conditions where we can do whatever we want with the data! <span role="img">😈</span> </small>

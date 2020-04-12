@@ -20,6 +20,9 @@ const userSchema = new Schema({
     default : 'https://raw.githubusercontent.com/Audreyobordelo/LOTX/master/server/public/images/chelovecheck.jpeg',
   },
 
+  items: [ {type:Schema.Types.ObjectId, ref : 'Item'} ],
+ 
+
 }, {
   timestamps: {
     createdAt: 'created_at',

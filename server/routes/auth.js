@@ -27,7 +27,9 @@ router.post("/login", (req, res, next) => {
       }
 
       // We are now logged in (thats why we can also send req.user)
-      res.status(200).json(theUser);
+      User.findOne({ _id: theUser._id })
+        .populate('items')
+        .then(userWithItems => res.status(200).json(userWithItems))
     });
   })(req, res, next);
 });
@@ -85,10 +87,11 @@ router.get("/logout", (req, res) => {
 
 router.get("/loggedin", (req, res, next) => {
   if (req.user) {
-    res.status(200).json(req.user);
+    User.findOne({ _id: req.user._id })
+      .populate('items')
+      .then(userWithItems => res.status(200).json(userWithItems))
     return;
   }
-
   res.status(403).json({message: 'Unauthorized'});
 });
 

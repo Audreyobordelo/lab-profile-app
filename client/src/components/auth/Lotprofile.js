@@ -6,6 +6,7 @@ import { Redirect } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 
+
  class Lotprofile extends  React.Component {
 
     state = {

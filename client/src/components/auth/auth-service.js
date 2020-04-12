@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export default {
   service: axios.create({
-    baseURL: `${process.env.REACT_APP_APIURL || ""}/auth`,
+    baseURL: `${process.env.REACT_APP_APIURL  || ""}/auth`,
     withCredentials: true
   }),
 

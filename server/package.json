@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "dev": "DEBUG=lab-profile-app:* nodemon --inspect --ignore client/ ./bin/www",
+    "dev": "nodemon --inspect --ignore client/ ./bin/www",
     "dev-windows": "nodemon ./bin/www",
     "build": "cd client && npm install && npm run build"
   },
